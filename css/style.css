@@ -395,9 +395,10 @@ header {
 }
 
 /* Floating WhatsApp Button */
-.floating-whatsapp {
+.floating-whatsapp,
+.whatsapp-float {
     position: fixed;
-    bottom: 25px;
+    bottom: 85px;
     right: 25px;
     background-color: #25d366;
     color: #fff;
@@ -414,7 +415,8 @@ header {
     transition: var(--transition);
 }
 
-.floating-whatsapp:hover {
+.floating-whatsapp:hover,
+.whatsapp-float:hover {
     transform: scale(1.1);
 }
 
