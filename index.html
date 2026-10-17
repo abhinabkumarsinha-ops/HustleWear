@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HustleWear - Be The Style Icon</title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        Use code First100 on your first purchase to get ₹100 OFF!
+    </div>
+
+    <!-- Header & Navbar -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo-container">
+                <img src="images/logo.png" alt="HustleWear Logo" onerror="this.style.display='none'">
+                <span class="brand-title">HUSTLE<span>WEAR</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">All Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="cart.html" class="icon-btn" title="Cart" style="position: relative;">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="hero">
+        <div class="hero-banner">
+            <img src="images/banner.jpg" alt="HustleWear Banner" onerror="this.src='https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80'">
+            <div class="hero-content">
+                <h1>Real Men. Real Hustle.</h1>
+                <p>Wear The Grind. Live The Standard.</p>
+                <a href="products.html" class="btn-gold">Explore Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Filter Section -->
+    <section class="categories-section">
+        <h2 class="section-title">Categories</h2>
+        <div class="category-chips" id="categoryChipsContainer">
+            <!-- Dynamically loaded via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
+            <h2 class="section-title" style="margin-bottom: 0;">Featured Collection</h2>
+            <div style="position: relative; max-width: 300px; width: 100%;">
+                <input type="text" id="searchInput" placeholder="Search products..." style="width: 100%; background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-main); padding: 8px 12px 8px 35px; border-radius: 6px; font-size: 0.9rem;">
+                <i class="fas fa-search" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.85rem;"></i>
+            </div>
+        </div>
+        
+        <div class="products-grid" id="productsGrid">
+            <!-- Dynamically loaded via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919339095208?text=Hello%20HustleWear,%20I%20want%20to%20know%20more%20about%20your%20products." target="_blank" class="floating-whatsapp" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>HustleWear</h3>
+                <p>Built For Men. Real Men. Real Hustle.</p>
+                <p style="margin-top: 10px; color: var(--gold-primary);">Location: Asansol, West Bengal</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Customer Policies</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="returns.html">Return & Refund Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 HustleWear. All rights reserved. Managed by Abhinab Kr Sinha.
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="products.html" class="mobile-nav-item">
+            <i class="fas fa-tshirt"></i>
+            <span>Shop</span>
+        </a>
+        <a href="cart.html" class="mobile-nav-item" style="position: relative;">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
+            <span class="cart-badge" style="top: -2px; right: 10px;">0</span>
+        </a>
+        <a href="contact.html" class="mobile-nav-item">
+            <i class="fas fa-headset"></i>
+            <span>Contact</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data/config.js"></script>
+    <script src="data/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/products-render.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - HustleWear</title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        Use code First100 on your first purchase to get ₹100 OFF!
+    </div>
+
+    <!-- Header & Navbar -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo-container">
+                <img src="images/logo.png" alt="HustleWear Logo" onerror="this.style.display='none'">
+                <span class="brand-title">HUSTLE<span>WEAR</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">All Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="cart.html" class="icon-btn active" title="Cart" style="position: relative;">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Content Section -->
+    <section style="max-width: 900px; margin: 30px auto 60px; padding: 0 20px; flex: 1; width: 100%;">
+        <h2 class="section-title">Your Shopping Cart</h2>
+        
+        <!-- Cart Items List -->
+        <div id="cartItemsContainer">
+            <!-- Dynamically loaded via JavaScript -->
+        </div>
+
+        <!-- Cart Summary Box -->
+        <div id="cartSummaryContainer" style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 20px; border-radius: 8px; margin-top: 20px; display: none;">
+            <h3 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--gold-primary);">Order Summary</h3>
+            
+            <!-- Coupon Box -->
+            <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                <input type="text" id="couponInput" placeholder="Enter Coupon Code (e.g. First100)" style="flex: 1; background: var(--bg-color); border: 1px solid var(--card-border); color: var(--text-main); padding: 8px 12px; border-radius: 6px; font-size: 0.9rem;">
+                <button onclick="applyCoupon()" class="btn-gold" style="padding: 8px 16px;">Apply</button>
+            </div>
+            <p id="couponMessage" style="font-size: 0.85rem; margin-bottom: 15px;"></p>
+
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.95rem; color: var(--text-muted);">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">₹0</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 0.95rem; color: var(--text-muted);">
+                <span>Discount</span>
+                <span id="cartDiscount">- ₹0</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 1.2rem; font-weight: 700; color: var(--text-main); border-top: 1px solid var(--card-border); padding-top: 15px;">
+                <span>Total Amount</span>
+                <span id="cartTotal" style="color: var(--gold-primary);">₹0</span>
+            </div>
+
+            <!-- WhatsApp Checkout Button -->
+            <button onclick="checkoutOnWhatsApp()" style="width: 100%; background-color: #25d366; color: #fff; border: none; padding: 12px; border-radius: 6px; font-size: 1rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: var(--transition);">
+                <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Order on WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919339095208?text=Hello%20HustleWear,%20I%20want%20to%20know%20more%20about%20your%20products." target="_blank" class="floating-whatsapp" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>HustleWear</h3>
+                <p>Built For Men. Real Men. Real Hustle.</p>
+                <p style="margin-top: 10px; color: var(--gold-primary);">Location: Asansol, West Bengal</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Customer Policies</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="returns.html">Return & Refund Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 HustleWear. All rights reserved. Managed by Abhinab Kr Sinha.
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="products.html" class="mobile-nav-item">
+            <i class="fas fa-tshirt"></i>
+            <span>Shop</span>
+        </a>
+        <a href="cart.html" class="mobile-nav-item active" style="position: relative;">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
+            <span class="cart-badge" style="top: -2px; right: 10px;">0</span>
+        </a>
+        <a href="contact.html" class="mobile-nav-item">
+            <i class="fas fa-headset"></i>
+            <span>Contact</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data/config.js"></script>
+    <script src="data/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            renderCartPage();
+        });
+    </script>
+</body>
+</html>
